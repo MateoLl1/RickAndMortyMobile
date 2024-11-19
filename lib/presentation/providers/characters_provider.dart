@@ -2,6 +2,13 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rick_and_morty_app/domain/domain.dart';
+import 'package:rick_and_morty_app/presentation/providers/characters_repository_provider.dart';
+
+
+final allCharactersProvider = StateNotifierProvider<CharacterNotifier,List<Character>>((ref) {
+  final repository = ref.watch(charactersRepositoryProvider);
+  return CharacterNotifier(repository: repository);
+});
 
 class CharacterNotifier extends StateNotifier<List<Character>> {
   final CharacterRepository repository;

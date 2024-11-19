@@ -5,12 +5,12 @@
 class Character {
     final int id;
     final String name;
-    final Status status;
-    final Species species;
+    final String status;
+    final String species;
     final String type;
-    final Gender gender;
-    final Location origin;
-    final Location location;
+    final String gender;
+    final String origin;
+    final String location;
     final String image;
     final List<String> episode;
     final String url;
@@ -33,30 +33,8 @@ class Character {
 
 }
 
-enum Gender {
-    FEMALE,
-    MALE,
-    UNKNOWN
-}
 
-class Location {
-    final String name;
-    final String url;
 
-    Location({
-        required this.name,
-        required this.url,
-    });
 
-}
 
-enum Species {
-    ALIEN,
-    HUMAN
-}
 
-enum Status {
-    ALIVE,
-    DEAD,
-    UNKNOWN
-}
